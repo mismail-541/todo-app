@@ -1,0 +1,539 @@
+
+
+/* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./outline-components/font-faces/raleway-v14-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Raleway'), local('Raleway-Regular'),
+         url('./outline-components/font-faces/raleway-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./outline-components/font-faces/raleway-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./outline-components/font-faces/raleway-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./outline-components/font-faces/raleway-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./outline-components/font-faces/raleway-v14-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+/* questrial-regular - latin */
+@font-face {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./outline-components/font-faces/questrial-v9-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Questrial'), local('Questrial-Regular'),
+         url('./outline-components/font-faces/questrial-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./outline-components/font-faces/questrial-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./outline-components/font-faces/questrial-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./outline-components/font-faces/questrial-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./outline-components/font-faces/questrial-v9-latin-regular.svg#Questrial') format('svg'); /* Legacy iOS */
+  } 
+
+  *{
+    font-family: Raleway;
+}
+.todos-table{
+    border: solid 2px red;
+}
+
+.todo-app{
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    height: 100vh;
+}
+
+.todo-header{
+    display: flex;
+    background-color: rgb(3, 189, 3);    
+}
+
+.todo-container{
+    height: 100vh;
+}
+
+.todo-cover{
+    height: 80vh;
+}
+
+.welcome-todo-link{
+    color: green;
+    font-style: italic;
+}
+
+.todo-footer{
+    background-color: rgb(4, 153, 4);
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width:100%;
+}
+
+.footer-text{
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-navbar{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 1em;
+    padding:20px;
+    background-color: rgb(4, 153, 4);
+}
+
+.todo-navbar-hamburger{
+    display:none;
+    list-style: none;
+    margin: 0;
+    font-size: 1em;
+    padding:20px;
+    background-color: rgb(4, 153, 4);
+    z-index: -1;
+}
+
+
+.todo-navbar-hamburger > li{
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    font-weight: bold;
+    background-color: rgb(4, 153, 4);
+
+}
+
+@media screen and (max-width: 500px),screen and (max-height: 500px) {
+    
+    .todo-navbar {
+        display:none;
+    }
+
+    .todo-navbar-hamburger{
+        display:flex !important;
+    }
+}
+
+
+a {
+    color: #f5f5f6;
+    text-decoration: none;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.todo-burger-nav{
+    display: none;
+    list-style: none;
+    margin: 0;
+    font-size: 1em;
+    padding:20px;
+    background-color: rgb(4, 153, 4);
+}
+
+.todo-burger-btn{
+    color: white;
+    margin: 0;
+    position:0;
+    padding:10px;
+}
+
+.todo-burger-btn:hover{
+    background-color: rgb(4, 116, 4);
+    
+}
+
+.todo-burger-menu{
+    margin:0;
+    padding:0;
+    border: none;
+    background-color: rgb(4, 153, 4);
+    list-style-type: none;  
+    text-align: start;
+}
+.todo-burger-menu > li{
+    margin:0;
+    text-decoration: none;
+    background-color: rgb(4, 153, 4);
+    padding:5px;
+    width:100%;
+    font-weight: bold;
+    
+}
+.todo-burger-menu > li:hover{
+    text-decoration: none;
+    background-color: rgb(3, 110, 3);
+    padding:5px;
+    
+}
+
+
+
+.todo-navbar > li {
+    color: white;
+    font-weight: bold; 
+    list-style-type: none; 
+    padding:10px;  
+    height: 20px; 
+}
+
+.todo-navbar > li:hover {
+    background-color: rgb(4, 116, 4);
+    padding:10px; 
+}
+
+.todo-navbar-li-last {
+    margin-left: auto !important;
+}
+
+.router-link{
+    text-decoration: none;
+}
+
+.footer{
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(4, 153, 4);
+    text-align: center;
+    color: #ffffff;
+}
+
+.login-component{
+    padding-top: 20px;
+    display:grid;
+    justify-content: center;
+}
+
+/*
+.login-credential-field {
+        padding: 20px;
+        border: 2px solid white;
+        border-bottom: 2px solid rgb(170, 170, 170);
+}
+   
+.login-credential-field:focus {
+        border-bottom: 2px solid rgb(6, 172, 0);
+}
+
+.login-credential-field:focus::-webkit-input-placeholder {
+    font-size: 0.5em;
+    top: -15px;
+}*/
+
+.login-comp-label {
+    margin:20px 0;
+    position:relative;
+    display:inline-block;
+  }
+    
+  .login-comp-span {
+    padding:10px;
+    pointer-events: none;
+    position:absolute;
+    left:0;
+    top:0;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity:0.5;
+  }
+  
+/* logging component field for username and password --- start */
+
+  .login-credential-field {
+    padding:10px;
+    border:none;
+    border-bottom: 5px solid rgb(145, 145, 145);
+  }
+
+  .login-credential-field:focus {
+    padding:10px;
+    border:none; 
+    border-bottom: 5px solid rgb(0, 177, 38);
+  }
+
+
+  
+  .login-credential-field:focus + .login-comp-span, .login-credential-field:not(:placeholder-shown) + .login-comp-span {
+    opacity:1;
+    transform: scale(0.75) translateY(-100%) translateX(-30px);  
+    color: rgb(0, 177, 38);  
+  }
+  
+  /* For IE Browsers*/
+  .login-credential-field:focus + .login-comp-span, .login-credential-field:not(:-ms-input-placeholder) + .login-comp-span {
+    opacity:1;
+    transform: scale(0.75) translateY(-100%) translateX(-30px);    
+  }
+  /* logging component field for username and password --- end */
+
+.login-submit-btn {
+    margin:30px;
+    border: none;
+    height: 50px;
+    background-color: rgb(0, 173, 0);
+    color: white;
+    font-size: 25px;
+}
+
+.login-submit-link {
+    margin-top: 30px;
+    border: none;
+    height: 50px;
+    background-color: rgb(0, 173, 0);
+    color: white;
+    font-size: 25px;
+    padding-top:15px;
+}
+
+.login-submit-btn:hover {
+    
+    background-color: rgb(1, 131, 1);
+}
+
+.login-submit-btn:active {
+    
+    background-color: rgb(1, 131, 1);
+    border: none;
+}
+
+.login-comp-instruction{
+    color: rgb(1, 131, 1);
+}
+
+.logout-container{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Hamburger menu button ----start*/
+.hamburger-menu{
+    background-color: rgb(4, 153, 4);
+    margin:0;
+}
+
+
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #616161;
+
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__box  > li{
+    padding:10px;
+}
+
+.menu__box  > li:hover{
+    padding:10px;
+    background-color: rgb(2, 85, 2);
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle {
+    opacity: 0;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  
+    width: 26px;
+    height: 26px;
+  
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    background-color:white;
+  
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+  
+    width: 300px;
+    height: 100%;
+  
+    margin: 0;
+    padding: 80px 0;
+  
+    list-style: none;
+  
+    background-color: rgb(1, 131, 1);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  
+    transition-duration: .25s;
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+  
+    color: #333;
+  
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  
+    text-decoration: none;
+  
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+/* Hamburger menu button ----end*/
+
+.todos-table-material-override{
+    z-index: 100 !important;
+    position: fixed !important;
+}
+
+.component-front{
+    top:0;
+    margin:0;
+    z-index:100; 
+    position: fixed;
+    width:100%;
+}
+
+.component-back{
+    top:0;
+    margin:0;
+    z-index: -1;
+}
+
+   
